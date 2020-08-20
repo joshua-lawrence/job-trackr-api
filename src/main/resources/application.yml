@@ -1,0 +1,9 @@
+#spring:
+#  datasource: 
+#    username: admin
+#    password: TrackerPass54!
+#    url: jdbc:mysql://job-trackr.c9abrbt2cc3o.us-east-1.rds.amazonaws.com:3306/jobtrackr
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  jpa:
+#    show-sql: true
+#    
