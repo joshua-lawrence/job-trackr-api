@@ -3,6 +3,7 @@ package com.joshualawrence.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +16,7 @@ import com.joshualawrence.entity.JobApplication;
 import com.joshualawrence.service.JobApplicationService;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class JobApplicationController {
 	
 	@Autowired
@@ -46,10 +48,11 @@ public class JobApplicationController {
 		return service.getApplicationById(id);
 	}
 	
-	@DeleteMapping("/delete/{id}")
-	public String deleteProduct(@PathVariable int id) {
+	@DeleteMapping("/deleteapplication/{id}")
+	public String deleteApplication(@PathVariable int id) {
 		return service.deleteJobApplication(id);
 	}
+
 	
 	@GetMapping("/test")
 	public String test() {

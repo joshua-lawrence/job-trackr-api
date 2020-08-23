@@ -39,6 +39,8 @@ public class JobApplicationService {
 		JobApplication existingJobApplication = repository.findById(jobApplication.getId()).orElse(null);
 		existingJobApplication.setTitle(jobApplication.getTitle());
 		existingJobApplication.setUrl(jobApplication.getUrl());
+		existingJobApplication.setStatus(jobApplication.getStatus());
+		existingJobApplication.setAppdate(jobApplication.getAppdate());
 		return repository.save(existingJobApplication);
 	}
 	
